@@ -7,8 +7,8 @@ main {
     justify-content: center;
     height: 100%;
 
-    section{
-        height: 100%;
+    section {
+        height: 100%; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,25 +17,28 @@ main {
 
     .main-section {
         gap: 8px;
+        height: 100%;
         flex-grow: 1;
         background-color: $gray-bg;
+       
     }
 
     .form-section {
         flex-grow: 0.3;
-        padding:0 35px;
-    
+        padding: 0 35px;
+
+        img {
+            margin-bottom: 20px;
+        }
 
         h2 {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 45px;
-        }
-        img{
             margin-bottom: 30px;
         }
 
-        .btn-wraper {
+        .btn-wrapper {
+            display: flex;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,50 +48,49 @@ main {
 
             .divider {
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+
                 font-size: 14px;
                 color: $gray-bg;
                 font-weight: 400;
-                align-items: center;
-                justify-content: center;
-                gap: 20px;
                 text-transform: uppercase;
-                width: 100%;
 
-                div{
+                div {
                     flex-grow: 1;
                     height: 2px;
                     background-color: $gray-bg;
                 }
             }
+
             button {
                 width: 100%;
                 border-radius: 8px;
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 500;
                 border: none;
-                background-color: transparent;
+                background: transparent;
                 padding: 12px 24px;
-                gap: 30px;
                 cursor: pointer;
 
-
-                    &:disabled {
-                        opacity: 0.8;
-                        cursor: default;
-                    };
-
-                    &.btn-primary {
-                        background-color: $primary-color;
-                        color: white;
-                        box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
-                    }
-
-                    &.btn-secondary {
-                        border: 1px solid $primary-color;
-                        color: $primary-color;
-                    }
-            
+                &:disabled {
+                    opacity: 0.8;
+                    cursor: default;
+                }
+    
+                &.btn-primary {
+                    background-color: $primary-color;
+                    color: white;
+                    box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
+                }
+    
+                &.btn-secondary {
+                    border: 1px solid $primary-color;
+                    color: $primary-color;
+                }
             }
+        }
     }
-}
 }
